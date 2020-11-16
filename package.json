@@ -1,0 +1,22 @@
+{
+  "name": "inn",
+  "version": "1.0.0",
+  "description": "Inn final project",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thaisont/inn-final-project.git"
+  },
+  "author": "Thai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thaisont/inn-final-project/issues"
+  },
+  "homepage": "https://github.com/thaisont/inn-final-project#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
