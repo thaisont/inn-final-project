@@ -1,6 +1,3 @@
-$color-primary: #c69963;
-$color-primary-dark: #b28451;
-
 * {
   padding: 0;
   margin: 0;
@@ -8,14 +5,19 @@ $color-primary-dark: #b28451;
 }
 
 html {
-  box-sizing: border-box;
   font-size: 62.5%; // 10px / 16px = 62.5%
 }
 
-h1 {
-  color: $color-primary;
-}
+//Color variable
+$color-primary: #221e39;
+$color-secondary: #4f4d4d;
+$color-tertiary: #9a9a9a;
 
-.test {
-  color: $color-primary-dark;
+//Font variable
+$font-primary: "Open Sans", sans-serif;
+
+body {
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 1.6rem;
 }

@@ -1,0 +1,19 @@
+.section__top {
+  padding: 1rem 5rem;
+  display: flex;
+
+  &--image-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--left--image {
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+
+  &--right {
+    display: flex;
+    flex-direction: column;
+  }
+}
