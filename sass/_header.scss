@@ -4,6 +4,7 @@
   top: 0;
   z-index: 1;
   background-color: white;
+  margin-bottom: 2rem;
 }
 
 .nav__list {
@@ -11,6 +12,8 @@
   margin-bottom: 2rem;
   padding: 1rem 5rem;
   align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
 
   &--logo {
     padding-right: 2rem;
