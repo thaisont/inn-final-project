@@ -24,10 +24,10 @@ body {
   margin-bottom: 2rem;
   padding: 1rem 5rem;
   align-items: center;
-  max-width: 1440px;
+  max-width: 1280px;
   margin: 0 auto; }
   .nav__list--logo {
-    padding-right: 2rem; }
+    width: 10%; }
   .nav__list--items {
     display: flex;
     list-style: none;
@@ -45,6 +45,56 @@ body {
       border: none;
       color: #fff;
       font-size: 1.4rem; }
+
+.footer {
+  background-color: #221e39;
+  color: #9a9a9a;
+  padding-top: 2rem; }
+  .footer__link {
+    display: flex;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 5rem; }
+  .footer__list,
+  .footer__list a {
+    display: flex;
+    list-style: none;
+    font-size: 16px;
+    margin-right: auto;
+    text-decoration: none;
+    color: #9a9a9a;
+    transition: ease-in 0.2s; }
+  .footer__list li:not(:last-child) {
+    margin-right: 2rem; }
+  .footer__list a:hover {
+    text-decoration: underline;
+    transform: translateY(-3px);
+    color: white; }
+
+.copyright {
+  max-width: 1280px;
+  margin: 0 auto;
+  font-size: 14px;
+  padding: 2rem 5rem; }
+
+.social__media a:not(:last-child) {
+  padding-right: 1rem; }
+
+.icon {
+  color: #9a9a9a; }
+
+.icon--facebook:hover {
+  color: #3b5998;
+  transition: ease-in 0.3s; }
+
+.icon--twitter:hover {
+  color: #00acee;
+  transition: ease-in 0.3s; }
+
+.icon--youtube:hover {
+  color: #c4302b;
+  transition: ease-in 0.3s; }
 
 .section__top {
   padding: 1rem 5rem;
@@ -64,15 +114,13 @@ body {
       font-weight: 100; }
   .section__top--title {
     font-size: 36px;
-    color: #221e39;
-    margin-bottom: 1rem; }
+    color: #221e39; }
   .section__top--description {
     font-weight: 600;
     font-size: 24px;
-    color: #221e39;
-    margin-bottom: 2rem; }
+    color: #221e39; }
     .section__top--description--search {
-      margin-bottom: 3rem; }
+      margin: 4rem 0; }
 
 .genre {
   font-size: 18px;
@@ -93,15 +141,18 @@ body {
 
 .search__term {
   width: 100%;
-  padding: 1.5rem 1rem;
+  padding: 2.8rem 1rem;
   border-color: black;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
-  border-radius: 5px; }
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25); }
+
+.main {
+  max-width: 1280px;
+  margin: 0 auto; }
 
 .mid__section {
-  padding: 5rem 7rem;
+  padding: 5rem 6rem;
   display: flex;
   column-gap: 2rem; }
   .mid__section--container {
@@ -114,4 +165,4 @@ body {
     padding: 1rem 0rem; }
   .mid__section--image {
     max-width: 100%;
-    border-radius: 5px; }
+    border-radius: 2px; }
