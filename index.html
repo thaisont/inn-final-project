@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" name="viewport">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
@@ -18,16 +18,35 @@
 <body>
     <header class="header">
         <nav class="nav__list">
-            <img src="/image/INN-logo.jpg" alt="logo" class="nav__list--logo">
-            <ul class="nav__list--items">
+            <a class="nav__list--logo--container" href="#">
+                <img src="/image/INN-logo.jpg" alt="logo" class="nav__list--logo"></a>
+            <div class="nav__items">
+                <div class="nav__list--items">
+                    <a class="nav__list--items-links" href="#">Reviews</a>
+                </div>
+                <div class="nav__list--items">
+                    <a class="nav__list--items-links" href="#">Games</a>
+                </div>
+                <div class="nav__list--items">
+                    <a class="nav__list--items-links" href="#">Entertainment</a>
+                </div>
+                <div class="nav__list--items">
+                    <a class="nav__list--items-links" href="#">About</a>
+                </div>
+            </div>
+
+            <!-- <ul class="nav__list--items">
                 <li>Reviews</li>
                 <li>Games</li>
                 <li>Entertainment</li>
                 <li>About</li>
-            </ul>
+            </ul> -->
+
             <div class="nav__list--right">
-                <div class="nav__list--right--button">Sign up
-                </div>
+                <a href="#">
+                    <div class="nav__list--right--button">Sign up
+                    </div>
+                </a>
             </div>
         </nav>
     </header>
@@ -37,22 +56,36 @@
             <div class="section__top">
                 <div class="section__top--image-container">
                     <div class="section__top--container">
-                        <img src="/image/apex.jpg" alt="banner of Apex Legends" class="section__top--image">
-                        <div class="section__top--image--description">Featured review: Apex Legends</div>
+                        <a href="#">
+                            <img src="/image/apex.jpg" alt="banner of Apex Legends" class="section__top--image">
+                            <div class="section__top--image--description">Featured review: Apex Legends</div>
+                        </a>
                     </div>
                     <div class="section__top--description--container">
                         <h1 class="section__top--title">Review for the gamers</h1>
                         <h2 class="section__top--description">Scored. Trusted. Reviews.</h2>
                         <div class="section__top--description--search">
+                            <i class="search__button fas fa-search fa-lg"></i>
                             <input type="text" class="search__term" placeholder="Search for a review">
+
                         </div>
                         <div class="genre">Browse by genre</div>
                         <ul class="genre__list">
-                            <li class="genre__list--card">Action</li>
-                            <li class="genre__list--card">Adventure</li>
-                            <li class="genre__list--card">Sports</li>
-                            <li class="genre__list--card">Fighting</li>
-                            <li class="genre__list--card">Shooting</li>
+                            <a href="#">
+                                <li class="genre__list--card">Action</li>
+                            </a>
+                            <a href="#">
+                                <li class="genre__list--card">Adventure</li>
+                            </a>
+                            <a href="#">
+                                <li class="genre__list--card">Sports</li>
+                            </a>
+                            <a href="#">
+                                <li class="genre__list--card">Fighting</li>
+                            </a>
+                            <a href="#">
+                                <li class="genre__list--card">Shooting</li>
+                            </a>
                         </ul>
                     </div>
                 </div>
@@ -63,31 +96,40 @@
         <section>
             <div class="mid__section">
                 <div class="mid__section--container">
-                    <img src="/image/spiderman-miles-morales.jpg" alt="Spiderman Miles Morales"
-                        class="mid__section--image">
-                    <div class="mid__section--description">
-                        Spider-Man Miles Morales review
-                    </div>
+                    <a href="#">
+                        <img src="/image/spiderman-miles-morales.jpg" alt="Spiderman Miles Morales"
+                            class="mid__section--image">
+                        <div class="mid__section--description">
+                            Spider-Man Miles Morales review
+                        </div>
+                    </a>
                 </div>
 
                 <div class="mid__section--container">
-                    <img src="/image/NBA-2k21.jpg" alt="UFC 4" class="mid__section--image">
-                    <div class="mid__section--description">
-                        NBA2k21 review
-                    </div>
+                    <a href="#">
+                        <img src="/image/NBA-2k21.jpg" alt="UFC 4" class="mid__section--image">
+                        <div class="mid__section--description">
+                            NBA2k21 review
+                        </div>
+                    </a>
                 </div>
 
                 <div class="mid__section--container">
-                    <img src="/image/ufc-4.jpg" alt="NBA 2K21" class="mid__section--image">
-                    <div class="mid__section--description">
-                        UFC 4 review
-                    </div>
+                    <a href="#">
+                        <img src="/image/ufc-4.jpg" alt="NBA 2K21" class="mid__section--image">
+                        <div class="mid__section--description">
+                            UFC 4 review
+                        </div>
+                    </a>
                 </div>
+
                 <div class="mid__section--container">
-                    <img src="/image/cod-cold-war.jpg" alt=" Call of Duty Cold War" class="mid__section--image">
-                    <div class="mid__section--description">
-                        Call of Duty Cold War review
-                    </div>
+                    <a href="#">
+                        <img src="/image/cod-cold-war.jpg" alt=" Call of Duty Cold War" class="mid__section--image">
+                        <div class="mid__section--description">
+                            Call of Duty Cold War review
+                        </div>
+                    </a>
                 </div>
 
             </div>

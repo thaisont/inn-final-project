@@ -10,7 +10,7 @@ html {
 
 //Color variable
 $color-primary: #221e39;
-$color-secondary: #4f4d4d;
+$color-secondary: #363636;
 $color-tertiary: #9a9a9a;
 
 $color-fb: #3b5998;
@@ -19,6 +19,13 @@ $color-youtube: #c4302b;
 
 //Font variable
 $font-primary: "Open Sans", sans-serif;
+
+//Breakpoint
+$bp-largest: 75em; //1200/16 = 75 em;
+$bp-large: 68.75em; //1100/16 = 68.75
+$bp-medium: 56.25em; //900/16 = 56.25
+$bp-small: 37.5em; //600/16 = 37.5
+$bp-smallest: 31.25em; //500/16 = 31.25
 
 body {
   font-family: $font-primary;

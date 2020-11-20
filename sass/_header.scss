@@ -7,6 +7,11 @@
   margin-bottom: 2rem;
 }
 
+.nav__items {
+  display: flex;
+  margin-right: auto;
+}
+
 .nav__list {
   display: flex;
   margin-bottom: 2rem;
@@ -16,16 +21,22 @@
   margin: 0 auto;
 
   &--logo {
-    width: 10%;
+    width: 100px;
   }
 
   &--items {
-    display: flex;
-    list-style: none;
-    margin-right: auto;
-    column-gap: 2rem;
     font-weight: 600;
-    font-weight: 1.4rem;
+
+    &-links {
+      padding: 23px 10px;
+      border-color: transparent;
+      text-decoration: none;
+      color: black;
+
+      &:hover {
+        border-bottom: 3px solid $color-primary;
+      }
+    }
   }
 
   &--right {
@@ -33,6 +44,11 @@
     border-radius: 5%;
     background-color: $color-primary;
     cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: #030306;
+    }
 
     &--button {
       padding: 0.8rem 4rem;
@@ -40,5 +56,9 @@
       color: #fff;
       font-size: 1.4rem;
     }
+  }
+
+  &--right a {
+    text-decoration: none;
   }
 }
