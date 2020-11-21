@@ -3,16 +3,26 @@
 
   &--image-container {
     display: flex;
-    margin-bottom: 5rem;
+    flex-direction: column;
 
-    @media screen and (min-width: 400px) {
-      flex-direction: column;
+    @media only screen and (min-width: $bp-small) {
+      margin-bottom: 2rem;
+    }
+
+    @media only screen and (min-width: $bp-large) {
+      flex-direction: row;
+      margin-bottom: 5rem;
     }
   }
 
   &--container {
     display: flex;
     flex-direction: column;
+    order: 1;
+
+    @media only screen and (min-width: $bp-large) {
+      order: 0;
+    }
   }
 
   &--container a {
@@ -24,9 +34,13 @@
   }
 
   &--image {
-    width: 98%;
+    width: 100%;
     height: 100%;
     transition: transform 1s ease;
+
+    @media only screen and (min-width: $bp-large) {
+      width: 98%;
+    }
 
     &--description {
       padding: 1rem 0;
@@ -37,21 +51,38 @@
   }
 
   &--title {
-    font-size: 36px;
     color: $color-primary;
+
+    @media only screen and (min-width: $bp-large) {
+      font-size: 32px;
+    }
+
+    @media only screen and (min-width: $bp-largest) {
+      font-size: 36px;
+    }
   }
 
   &--description {
     font-weight: 600;
-    font-size: 24px;
+    font-size: 22px;
     color: $color-primary;
 
-    &--container {
+    @media only screen and (min-width: $bp-large) {
+      font-size: 20px;
+    }
+
+    @media only screen and (min-width: $bp-largest) {
+      font-size: 24px;
     }
 
     &--search {
-      margin: 4rem 0;
+      margin: 2rem 0;
       position: relative;
+
+      @media only screen and (min-width: $bp-largest) {
+        font-size: 24px;
+        margin: 4rem 0;
+      }
     }
   }
 }
@@ -69,6 +100,10 @@
   color: $color-primary;
   margin-bottom: 1.5rem;
 
+  @media only screen and (min-width: $bp-large) {
+    margin-bottom: 1rem;
+  }
+
   &__list a {
     text-decoration: none;
   }
@@ -76,7 +111,14 @@
   &__list {
     list-style: none;
     display: flex;
-    column-gap: 1rem;
+    margin-bottom: 2rem;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    @media only screen and (min-width: $bp-large) {
+      flex-direction: row;
+      column-gap: 1rem;
+    }
 
     &--card {
       border: 1px solid black;
@@ -85,9 +127,15 @@
       font-family: $font-primary;
       color: white;
       cursor: pointer;
+      transition: all 0.2s;
+
+      @media only screen and (min-width: $bp-large) {
+        padding: 2rem 2rem;
+      }
 
       &:hover {
         text-decoration: underline;
+        opacity: 80%;
       }
     }
   }
@@ -108,9 +156,16 @@
 }
 
 .mid__section {
-  padding: 5rem 6rem;
+  padding: 1rem 8rem;
   display: flex;
   column-gap: 2rem;
+  flex-direction: column;
+  text-align: center;
+
+  @media only screen and (min-width: $bp-large) {
+    flex-direction: row;
+    padding: 1rem 6rem;
+  }
 
   &--container {
     display: flex;
@@ -124,22 +179,30 @@
 
   &--container {
     flex-direction: column;
-    text-align: center;
+
+    @media only screen and (min-width: $bp-large) {
+      text-align: center;
+    }
   }
 
   &--container img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     opacity: 90%;
   }
 
   &--image {
-    max-width: 100%;
+    max-width: 80%;
     border-radius: 2px;
-    margin-bottom: 1rem;
     transition: transform 1s ease;
+
+    @media only screen and (min-width: $bp-large) {
+      max-width: 100%;
+    }
   }
 
   &--description {
     color: $color-secondary;
+    padding: 1rem 0;
+    font-weight: 600;
   }
 }
