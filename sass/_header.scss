@@ -1,3 +1,103 @@
+.burger__icon {
+  position: absolute;
+  right: 2rem;
+  &,
+  &::before,
+  &::after {
+    width: 3rem;
+    height: 5px;
+    background-color: black;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s;
+  }
+
+  &::before {
+    top: -0.8rem;
+  }
+  &::after {
+    top: 0.8rem;
+  }
+
+  @media only screen and (min-width: $bp-large) {
+    display: none;
+  }
+}
+
+.animate {
+  background-color: transparent;
+}
+
+.animate::before {
+  top: 0rem;
+  transform: rotate(135deg);
+}
+
+.animate::after {
+  top: 0rem;
+  transform: rotate(-135deg);
+}
+
+.burger__background {
+  height: 100vh;
+  width: 30%;
+  position: fixed;
+  top: 7.5rem;
+  right: 0;
+  background-color: #221e39;
+  transform: translate(100%);
+  transition: transform 0.3s ease-in;
+
+  @media only screen and (min-width: $bp-large) {
+    display: none;
+  }
+}
+
+.burger-active {
+  transform: translate(0%);
+}
+
+.burger__outside {
+  background-color: $color-secondary;
+  position: fixed;
+  top: 7.4rem;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 70%;
+  visibility: hidden;
+  transition: transform 0.3s ease-in;
+
+  @media only screen and (min-width: $bp-large) {
+    display: none;
+  }
+}
+
+.burger__outside--active {
+  visibility: visible;
+}
+
+.nav__list--mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0;
+}
+
+.nav__list--mobile a {
+  color: white;
+  list-style: none;
+  text-decoration: none;
+  padding: 1rem 0px;
+}
+
 .header {
   box-shadow: 0 5px 5px 0 rgba(45, 35, 39, 0.15);
   position: sticky;
@@ -10,6 +110,14 @@
 .nav__items {
   display: flex;
   margin-right: auto;
+
+  @media only screen and (min-width: $bp-smallest) {
+    display: none;
+  }
+
+  @media only screen and (min-width: $bp-large) {
+    display: flex;
+  }
 }
 
 .nav__list {
@@ -40,11 +148,13 @@
   }
 
   &--right {
-    border: 1px solid $color-primary;
-    border-radius: 5%;
-    background-color: $color-primary;
-    cursor: pointer;
-    transition: all 0.2s;
+    @media only screen and (min-width: $bp-large) {
+      border: 1px solid $color-primary;
+      border-radius: 5%;
+      background-color: $color-primary;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
 
     &:hover {
       background-color: #030306;
@@ -55,6 +165,14 @@
       border: none;
       color: #fff;
       font-size: 1.4rem;
+
+      @media only screen and (min-width: $bp-small) {
+        display: none;
+      }
+
+      @media only screen and (min-width: $bp-large) {
+        display: flex;
+      }
     }
   }
 

@@ -29,8 +29,14 @@
     text-decoration: none;
   }
 
-  &--container img:hover {
-    opacity: 90%;
+  &--container:hover {
+    img {
+      opacity: 90%;
+    }
+
+    .section__top--image--description {
+      text-decoration: underline;
+    }
   }
 
   &--image {
@@ -185,9 +191,15 @@
     }
   }
 
-  &--container img:hover {
-    transform: scale(1.05);
-    opacity: 90%;
+  &--container:hover {
+    img {
+      transform: scale(1.05);
+      opacity: 90%;
+    }
+
+    .mid__section--description {
+      text-decoration: underline;
+    }
   }
 
   &--image {
