@@ -87,7 +87,7 @@ body {
 
 .burger__icon {
   position: absolute;
-  right: 2rem; }
+  right: 6rem; }
   .burger__icon, .burger__icon::before, .burger__icon::after {
     width: 3rem;
     height: 5px;
@@ -106,6 +106,9 @@ body {
   @media only screen and (min-width: 68.75em) {
     .burger__icon {
       display: none; } }
+
+.overflow {
+  overflow: hidden; }
 
 .animate {
   background-color: transparent; }
@@ -162,6 +165,8 @@ body {
   list-style: none;
   text-decoration: none;
   padding: 1rem 0px; }
+  .nav__list--mobile a:hover {
+    text-decoration: underline; }
 
 .header {
   box-shadow: 0 5px 5px 0 rgba(45, 35, 39, 0.15);
