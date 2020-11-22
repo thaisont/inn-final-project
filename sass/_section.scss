@@ -1,5 +1,6 @@
 .section__top {
   padding: 1rem 5rem;
+  margin: 2rem;
 
   &--image-container {
     display: flex;
@@ -94,6 +95,7 @@
 }
 
 .search__button {
+  color: $color-primary;
   position: absolute;
   top: 3rem;
   right: 3rem;
@@ -217,4 +219,61 @@
     padding: 1rem 0;
     font-weight: 600;
   }
+}
+
+// Apex Legends page
+
+.top__section {
+  padding: 1rem 5rem;
+  display: flex;
+
+  &--container {
+    margin-right: auto;
+  }
+}
+
+.background__banner {
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 50%;
+  width: 100%;
+  position: absolute;
+  z-index: -10;
+}
+
+.background__body {
+  padding: 3rem;
+  margin: 1rem 6rem;
+  background-color: #1b2838;
+  z-index: -9;
+  position: relative;
+  color: white;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &__number {
+    border-radius: 50%;
+    border: 2px solid black;
+    padding: 1rem 2rem;
+    background-color: gold;
+    font-weight: 700;
+    color: white;
+  }
+}
+
+.background__container {
+  display: flex;
+}
+
+.right__section {
+  display: flex;
+  flex-direction: column;
+}
+
+.body__image img {
+  width: 400px;
 }

@@ -105,10 +105,7 @@ body {
     top: 0.8rem; }
   @media only screen and (min-width: 68.75em) {
     .burger__icon {
-      display: none; } }
-
-.overflow {
-  overflow: hidden; }
+      visibility: hidden; } }
 
 .animate {
   background-color: transparent; }
@@ -173,8 +170,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: white;
-  margin-bottom: 2rem; }
+  background-color: white; }
 
 .nav__items {
   display: flex;
@@ -228,7 +224,8 @@ body {
     text-decoration: none; }
 
 .section__top {
-  padding: 1rem 5rem; }
+  padding: 1rem 5rem;
+  margin: 2rem; }
   .section__top--image-container {
     display: flex;
     flex-direction: column; }
@@ -291,6 +288,7 @@ body {
           margin: 4rem 0; } }
 
 .search__button {
+  color: #221e39;
   position: absolute;
   top: 3rem;
   right: 3rem;
@@ -380,3 +378,47 @@ body {
     color: #363636;
     padding: 1rem 0;
     font-weight: 600; }
+
+.top__section {
+  padding: 1rem 5rem;
+  display: flex; }
+  .top__section--container {
+    margin-right: auto; }
+
+.background__banner {
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 50%;
+  width: 100%;
+  position: absolute;
+  z-index: -10; }
+
+.background__body {
+  padding: 3rem;
+  margin: 1rem 6rem;
+  background-color: #1b2838;
+  z-index: -9;
+  position: relative;
+  color: white; }
+
+.rating {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  .rating__number {
+    border-radius: 50%;
+    border: 2px solid black;
+    padding: 1rem 2rem;
+    background-color: gold;
+    font-weight: 700;
+    color: white; }
+
+.background__container {
+  display: flex; }
+
+.right__section {
+  display: flex;
+  flex-direction: column; }
+
+.body__image img {
+  width: 400px; }

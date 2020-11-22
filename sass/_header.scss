@@ -28,12 +28,8 @@
   }
 
   @media only screen and (min-width: $bp-large) {
-    display: none;
+    visibility: hidden;
   }
-}
-
-.overflow {
-  overflow: hidden;
 }
 
 .animate {
@@ -113,7 +109,6 @@
   top: 0;
   z-index: 1;
   background-color: white;
-  margin-bottom: 2rem;
 }
 
 .nav__items {
