@@ -105,7 +105,8 @@ body {
     top: 0.8rem; }
   @media only screen and (min-width: 68.75em) {
     .burger__icon {
-      visibility: hidden; } }
+      visibility: hidden;
+      opacity: 0; } }
 
 .animate {
   background-color: transparent; }
@@ -146,7 +147,7 @@ body {
   transition: transform 0.3s ease-in; }
   @media only screen and (min-width: 68.75em) {
     .burger__outside {
-      display: none; } }
+      visibility: hidden; } }
 
 .burger__outside--active {
   visibility: visible; }
@@ -214,7 +215,7 @@ body {
     border: none;
     color: #fff;
     font-size: 1.4rem; }
-    @media only screen and (min-width: 37.5em) {
+    @media only screen and (min-width: 31.25em) {
       .nav__list--right--button {
         display: none; } }
     @media only screen and (min-width: 68.75em) {
@@ -397,7 +398,6 @@ body {
   padding: 3rem;
   margin: 1rem 6rem;
   background-color: #1b2838;
-  z-index: -9;
   position: relative;
   color: white; }
 
