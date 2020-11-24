@@ -42,8 +42,10 @@
                     </div>
                 </a>
             </div>
-            <button>
+
+            <a href="#">
                 <div class="burger__icon"></div>
+
                 <div class="burger__outside"></div>
                 <div class="burger__background">
                     <ul class="nav__list--mobile">
@@ -65,8 +67,7 @@
                     </ul>
 
                 </div>
-            </button>
-
+            </a>
         </nav>
 
 
@@ -91,12 +92,14 @@
                         <h2 class="section__top--description">Scored. Trusted. Reviews.</h2>
                         <div class="section__top--description--search">
 
-                            <form id="search" role="search" type="GET" action="https://www.google.com/search">
+                            <form id="search" role="search" method="GET" action="https://www.google.com/search">
+                                <label for="q">
+                                    <i class="search__button fas fa-search fa-lg" title="Search for a game review"
+                                        aria-hidden="true"></i></label>
                                 <input type="search" class="search__term" name="search" aria-label="search"
-                                    placeholder="Search for a review">
-                                <a href="#">
-                                    <i class="search__button fas fa-search fa-lg"
-                                        title="Search for a game review"></i></a>
+                                    placeholder="Search for a review" id="q">
+
+
 
                                 <form>
 
