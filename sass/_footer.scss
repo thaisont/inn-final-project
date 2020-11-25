@@ -54,22 +54,17 @@
   margin: 0 auto;
 
   font-size: 14px;
-  padding: 2rem 2rem;
+  padding: 1rem 2rem;
+  padding-top: 1rem;
 }
 
 .social__media {
   display: flex;
-  flex-direction: column;
-  @media only screen and (min-width: $bp-large) {
-    flex-direction: row;
-  }
+  flex-direction: row;
 }
 
 .social__media a:not(:last-child) {
-  padding-bottom: 1rem;
-  @media only screen and (min-width: $bp-large) {
-    padding-right: 1rem;
-  }
+  padding-right: 1rem;
 }
 
 .icon {

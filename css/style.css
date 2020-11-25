@@ -56,20 +56,15 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   font-size: 14px;
-  padding: 2rem 2rem; }
+  padding: 1rem 2rem;
+  padding-top: 1rem; }
 
 .social__media {
   display: flex;
-  flex-direction: column; }
-  @media only screen and (min-width: 68.75em) {
-    .social__media {
-      flex-direction: row; } }
+  flex-direction: row; }
 
 .social__media a:not(:last-child) {
-  padding-bottom: 1rem; }
-  @media only screen and (min-width: 68.75em) {
-    .social__media a:not(:last-child) {
-      padding-right: 1rem; } }
+  padding-right: 1rem; }
 
 .icon {
   color: #9a9a9a; }
@@ -401,8 +396,18 @@ body {
     margin-right: auto;
     padding: 1rem 2rem; }
 
+.page__title {
+  font-size: 32px; }
+  @media only screen and (min-width: 56.25em) {
+    .page__title {
+      font-size: 36px; } }
+
 .breadcrumbs {
-  padding: 2rem 0; }
+  padding: 1rem 0;
+  font-size: 14px; }
+  @media only screen and (min-width: 56.25em) {
+    .breadcrumbs {
+      font-size: 16px; } }
 
 .breadcrumbs a {
   text-decoration: none;
