@@ -2,3 +2,13 @@
   max-width: 1280px;
   margin: 0 auto;
 }
+
+@mixin background-banner {
+  height: 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: -10;
+  width: 100%;
+  opacity: 30%;
+}

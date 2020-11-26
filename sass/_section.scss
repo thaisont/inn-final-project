@@ -153,7 +153,7 @@
 }
 
 .genre__list--container:not(:last-child) {
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
 }
 
 .search__term {
@@ -163,7 +163,7 @@
   font-family: $font-primary;
   font-size: 14px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
-  border-radius: 0%;
+  border-radius: 0% !important;
 }
 
 .main {
@@ -238,7 +238,6 @@
 
   &--container {
     margin-right: auto;
-    padding: 1rem 2rem;
   }
 }
 
@@ -280,32 +279,35 @@
 }
 
 .background__banner {
-  background-image: url(/image/spiderman-miles-morales.jpg);
-  height: 40%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: -10;
-  width: 100%;
-  opacity: 30%;
+  &--apex {
+    background-image: url(/image/apex-banner.jpg);
+    @include background-banner;
+  }
 
   &--spiderman {
+    @include background-banner;
     background-image: url(/image/spiderman-miles-morales.jpg);
+  }
+
+  &--nba {
+    @include background-banner;
+    background-image: url(/image/NBA-banner.jpg);
+  }
+
+  &--ufc {
+    @include background-banner;
+    background-image: url(/image/ufc-4-banner.jpg);
+  }
+
+  &--cod {
+    @include background-banner;
+    background-image: url(/image/cod-banner.png);
   }
 
   @media only screen and (min-width: $bp-medium) {
     height: 70%;
   }
 }
-
-// .background__banner {
-//   background-repeat: no-repeat;
-//   background-size: contain;
-//   opacity: 30%;
-//   width: 100%;
-//   position: absolute;
-//   z-index: -10;
-// }
 
 .background__body {
   padding: 1.5rem;
@@ -317,34 +319,6 @@
 
   @media only screen and (min-width: $bp-medium) {
     padding: 3rem;
-  }
-}
-
-.rating {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-
-  &__number {
-    padding: 3rem;
-    background-color: $color-primary;
-    font-weight: 700;
-    color: white;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    font-size: 2.4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 0 0 3px #c5ac1f;
-
-    @media only screen and (min-width: $bp-medium) {
-      padding: 3.5rem;
-      font-size: 3rem;
-    }
   }
 }
 
