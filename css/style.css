@@ -315,7 +315,7 @@ body {
     display: flex;
     margin-bottom: 2rem;
     flex-direction: column;
-    row-gap: 1rem; }
+    padding-bottom: 1rem; }
     @media only screen and (min-width: 68.75em) {
       .genre__list {
         flex-direction: row;
@@ -335,13 +335,17 @@ body {
         text-decoration: underline;
         opacity: 80%; }
 
+.genre__list--container:not(:last-child) {
+  padding-bottom: 2rem; }
+
 .search__term {
   width: 100%;
   padding: 2.8rem 1rem;
   border-color: black;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25); }
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 0%; }
 
 .main {
   max-width: 1280px;
