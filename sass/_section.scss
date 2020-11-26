@@ -162,8 +162,7 @@
 }
 
 .main {
-  max-width: 1280px;
-  margin: 0 auto;
+  @include center;
 }
 
 .mid__section {
@@ -230,8 +229,7 @@
 .top__section {
   padding: 1rem 2rem;
   display: flex;
-  max-width: 1280px;
-  margin: 0 auto;
+  @include center;
 
   &--container {
     margin-right: auto;
@@ -258,12 +256,17 @@
 
 .breadcrumbs a {
   text-decoration: none;
-  color: $color-secondary;
   font-weight: 600;
+  color: black;
 
   &:hover {
     color: $color-primary;
     text-decoration: underline;
+  }
+
+  &:active,
+  &:focus {
+    color: $color-secondary;
   }
 }
 
@@ -272,20 +275,38 @@
 }
 
 .background__banner {
+  background-image: url(/image/spiderman-miles-morales.jpg);
+  height: 40%;
   background-repeat: no-repeat;
-  background-size: contain;
-  opacity: 30%;
-  width: 100%;
+  background-size: cover;
   position: absolute;
   z-index: -10;
+  width: 100%;
+  opacity: 30%;
+
+  &--spiderman {
+    background-image: url(/image/spiderman-miles-morales.jpg);
+  }
+
+  @media only screen and (min-width: $bp-medium) {
+    height: 70%;
+  }
 }
+
+// .background__banner {
+//   background-repeat: no-repeat;
+//   background-size: contain;
+//   opacity: 30%;
+//   width: 100%;
+//   position: absolute;
+//   z-index: -10;
+// }
 
 .background__body {
   padding: 1.5rem;
   margin: 1rem 2rem;
   background-color: #1b2838;
-  max-width: 1280px;
-  margin: 0 auto;
+  @include center;
   position: relative;
   color: white;
 
@@ -300,7 +321,7 @@
   flex-direction: column;
 
   &__number {
-    padding: 3.5rem;
+    padding: 3rem;
     background-color: $color-primary;
     font-weight: 700;
     color: white;
@@ -309,11 +330,16 @@
     border-radius: 50%;
     display: flex;
     justify-content: center;
-    font-size: 30px;
+    font-size: 2.4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 0 0 0 3px #c5ac1f;
+
+    @media only screen and (min-width: $bp-medium) {
+      padding: 3.5rem;
+      font-size: 3rem;
+    }
   }
 }
 
