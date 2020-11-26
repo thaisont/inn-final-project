@@ -219,10 +219,8 @@ body {
     padding: 0.8rem 4rem;
     border: none;
     color: #fff;
-    font-size: 1.6rem; }
-    @media only screen and (min-width: 31.25em) {
-      .nav__list--right--button {
-        display: none; } }
+    font-size: 1.6rem;
+    display: none; }
     @media only screen and (min-width: 68.75em) {
       .nav__list--right--button {
         display: flex; } }
