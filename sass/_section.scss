@@ -234,9 +234,11 @@
 .top__section {
   padding: 1rem 2rem;
   display: flex;
+
   @include center;
 
   &--container {
+    padding-right: 2rem;
     margin-right: auto;
   }
 }

@@ -25,3 +25,67 @@
     }
   }
 }
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact__button {
+  cursor: pointer;
+  width: 30rem;
+  border-style: none;
+  border-radius: 2px;
+  transition: all 0.5s;
+  padding: 1rem;
+  font-weight: 600;
+  background: #0072ce;
+  color: white;
+
+  &:hover,
+  &:focus {
+    background: $color-tertiary;
+  }
+}
+
+.field__style {
+  border-radius: 5px;
+  padding: 0.5rem;
+  border-style: none;
+  margin: 0.5rem 0;
+
+  &--message {
+    padding: 2rem;
+    border-style: none;
+    margin: 0.5rem 0;
+  }
+}
+
+.label__style {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  margin-bottom: 1rem;
+}
+
+.contact__detail {
+  padding-bottom: 2rem;
+}
+
+.email__style {
+  color: white;
+}
+
+#map {
+  height: 500px;
+  width: 50%;
+  position: absolute;
+  top: 7rem;
+  right: 2rem;
+}
+
+.gm-style-iw-d {
+  color: black;
+}
+
+//AIzaSyAniJ_IIIrZWethCsi5D3_ixtw41oJv9I4
