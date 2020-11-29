@@ -42,14 +42,18 @@ body {
 
 #contact__button {
   cursor: pointer;
-  width: 30rem;
+  width: 100%;
   border-style: none;
   border-radius: 2px;
   transition: all 0.5s;
   padding: 1rem;
   font-weight: 600;
   background: #0072ce;
-  color: white; }
+  color: white;
+  margin-bottom: 2rem; }
+  @media only screen and (min-width: 56.25em) {
+    #contact__button {
+      width: 40%; } }
   #contact__button:hover, #contact__button:focus {
     background: #9a9a9a; }
 
@@ -66,8 +70,11 @@ body {
 .label__style {
   display: flex;
   flex-direction: column;
-  width: 30rem;
+  width: 100%;
   margin-bottom: 1rem; }
+  @media only screen and (min-width: 56.25em) {
+    .label__style {
+      width: 40%; } }
 
 .contact__detail {
   padding-bottom: 2rem; }
@@ -77,10 +84,16 @@ body {
 
 #map {
   height: 500px;
-  width: 50%;
-  position: absolute;
-  top: 7rem;
-  right: 2rem; }
+  width: 100%;
+  position: relative;
+  top: 0rem;
+  right: 0rem; }
+  @media only screen and (min-width: 56.25em) {
+    #map {
+      top: 7rem;
+      width: 50%;
+      position: absolute;
+      right: 2rem; } }
 
 .gm-style-iw-d {
   color: black; }
@@ -547,6 +560,16 @@ body {
   width: 100%;
   opacity: 30%;
   background-image: url(/image/cod-banner.png); }
+
+.background__banner--contact {
+  height: 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: -10;
+  width: 100%;
+  opacity: 30%;
+  background-image: url(/image/Contact-banner.jpg); }
 
 @media only screen and (min-width: 56.25em) {
   .background__banner {

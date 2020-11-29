@@ -306,6 +306,11 @@
     background-image: url(/image/cod-banner.png);
   }
 
+  &--contact {
+    @include background-banner;
+    background-image: url(/image/Contact-banner.jpg);
+  }
+
   @media only screen and (min-width: $bp-medium) {
     height: 70%;
   }

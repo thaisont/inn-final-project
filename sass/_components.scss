@@ -33,7 +33,7 @@
 
 #contact__button {
   cursor: pointer;
-  width: 30rem;
+  width: 100%;
   border-style: none;
   border-radius: 2px;
   transition: all 0.5s;
@@ -41,6 +41,11 @@
   font-weight: 600;
   background: #0072ce;
   color: white;
+  margin-bottom: 2rem;
+
+  @media only screen and (min-width: $bp-medium) {
+    width: 40%;
+  }
 
   &:hover,
   &:focus {
@@ -64,8 +69,12 @@
 .label__style {
   display: flex;
   flex-direction: column;
-  width: 30rem;
+  width: 100%;
   margin-bottom: 1rem;
+
+  @media only screen and (min-width: $bp-medium) {
+    width: 40%;
+  }
 }
 
 .contact__detail {
@@ -78,10 +87,17 @@
 
 #map {
   height: 500px;
-  width: 50%;
-  position: absolute;
-  top: 7rem;
-  right: 2rem;
+  width: 100%;
+  position: relative;
+  top: 0rem;
+  right: 0rem;
+
+  @media only screen and (min-width: $bp-medium) {
+    top: 7rem;
+    width: 50%;
+    position: absolute;
+    right: 2rem;
+  }
 }
 
 .gm-style-iw-d {
