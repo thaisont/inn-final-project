@@ -18,16 +18,6 @@ burgerOutside.addEventListener("click", function (event) {
 
 //Google Map
 
-// function initMap() {
-
-//   let options = {
-//     zoom: 8,
-//     center {lat:51.5045, lng:0.0865},
-//   }
-
-//   let map = new google.maps.Map(document.getElementById("map"), options)
-// }
-
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 51.5045, lng: -0.0865 },
@@ -52,3 +42,46 @@ function initMap() {
     infowindow.open(map, marker);
   });
 }
+
+// IGDB API
+
+//Client ID - rkh8yp9twik1pqb6h9el1mur2ah3fs
+// Client secret - 9srh1ecwcti9dy8um1p4pfjpb7xv0c
+
+// {
+//     "access_token": "hhdi4so0l7uzp8xqd165c628lzss71",
+//     "expires_in": 5598967,
+//     "token_type": "bearer"
+// }
+
+let myHeaders = new Headers();
+myHeaders.append("Client-ID", "rkh8yp9twik1pqb6h9el1mur2ah3fs");
+myHeaders.append("Authorization", "Bearer hhdi4so0l7uzp8xqd165c628lzss71");
+myHeaders.append(
+  "Cookie",
+  "__cfduid=d8e13647ba8cc255b89736ed9484294be1606685768"
+);
+
+let raw = "";
+
+let requestOptions = {
+  method: "POST",
+  headers: myHeaders,
+  body: raw,
+  redirect: "follow",
+};
+
+fetch("https://api.igdb.com/v4/genres", requestOptions)
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
+
+// // end point
+// https://api.igdb.com/v4/genres
+
+// async function data() {
+//   const response = await fetch(
+//     "https://id.twitch.tv/oauth2/tokenclient_id=rkh8yp9twik1pqb6h9el1mur2ah3fs&client_secret=70e1marefy5em3c2spjr58pvrqlp2t&grant_type=client_credentials"
+//   );
+//   const twitchData = await response.json();
+// }
