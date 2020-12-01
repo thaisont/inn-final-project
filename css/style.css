@@ -98,6 +98,12 @@ body {
 .gm-style-iw-d {
   color: black; }
 
+.body__stop-scroll {
+  overflow: hidden; }
+  @media only screen and (min-width: 56.25em) {
+    .body__stop-scroll {
+      overflow: visible; } }
+
 .footer {
   margin-top: 5vw;
   background-color: #221e39;

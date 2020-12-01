@@ -104,4 +104,11 @@
   color: black;
 }
 
-//AIzaSyAniJ_IIIrZWethCsi5D3_ixtw41oJv9I4
+.body {
+  &__stop-scroll {
+    overflow: hidden;
+    @media only screen and (min-width: $bp-medium) {
+      overflow: visible;
+    }
+  }
+}
