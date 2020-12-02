@@ -104,11 +104,12 @@
   color: black;
 }
 
-.body {
-  &__stop-scroll {
-    overflow: hidden;
-    @media only screen and (min-width: $bp-medium) {
-      overflow: visible;
-    }
+.stop-scroll {
+  overflow: hidden;
+  @media only screen and (min-width: $bp-large) {
+    overflow: visible;
   }
+}
+
+.burger {
 }

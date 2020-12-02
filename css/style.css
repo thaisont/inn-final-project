@@ -98,10 +98,10 @@ body {
 .gm-style-iw-d {
   color: black; }
 
-.body__stop-scroll {
+.stop-scroll {
   overflow: hidden; }
-  @media only screen and (min-width: 56.25em) {
-    .body__stop-scroll {
+  @media only screen and (min-width: 68.75em) {
+    .stop-scroll {
       overflow: visible; } }
 
 .footer {

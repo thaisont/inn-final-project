@@ -1,22 +1,22 @@
+const burger = document.querySelector(".burger");
 const burgerNav = document.querySelector(".burger__icon");
 const burgerOutside = document.querySelector(".burger__outside");
 const burgerDisplay = document.querySelector(".burger__background");
 const body = document.querySelector("body");
-const burgerActive = document.querySelector(".burger__icon animate");
 
 //Toggle nav
-burgerNav.addEventListener("click", function () {
+burger.addEventListener("click", function () {
   burgerDisplay.classList.toggle("burger-active");
   burgerOutside.classList.toggle("burger__outside--active");
   burgerNav.classList.toggle("animate");
-  body.classList.add("body__stop-scroll");
+  body.classList.add("stop-scroll");
 });
 
 burgerOutside.addEventListener("click", function (event) {
   burgerDisplay.classList.remove("burger-active");
   burgerOutside.classList.remove("burger__outside--active");
   burgerNav.classList.remove("animate");
-  body.classList.remove("body__stop-scroll");
+  body.classList.remove("stop-scroll");
 });
 
 //Google Map
@@ -46,22 +46,6 @@ function initMap() {
   });
 }
 
-//Setting up CORS
-
-const express = require("express");
-const cors = require("cors");
-const app = express();
-
-app.use(cors());
-
-app.get("/products/:id", function (req, res, next) {
-  res.json({ msg: "This is CORS-enabled for all origins!" });
-});
-
-app.listen(80, function () {
-  console.log("CORS-enabled web server listening on port 80");
-});
-
 // IGDB API DETAILS
 
 //Client ID - rkh8yp9twik1pqb6h9el1mur2ah3fs
@@ -76,6 +60,8 @@ app.listen(80, function () {
 // // end point
 // https://it53gz3qc0.execute-api.us-west-2.amazonaws.com/production/v4/games
 // https://api.igdb.com/v4/games
+
+// https://it53gz3qc0.execute-api.us-west-2.amazonaws.com/production/v4/games
 
 // IGDB API
 
@@ -99,9 +85,23 @@ let requestOptions = {
 };
 
 fetch(
-  "https://it53gz3qc0.execute-api.us-west-2.amazonaws.com/production/v4/games",
+  "https://cors-anywhere.herokuapp.com/https://api.igdb.com/v4/games/",
   requestOptions
 )
-  .then((response) => response.text())
-  .then((result) => console.log(result))
+  .then((response) => response.json())
+  .then((result) => handleResult(result))
   .catch((error) => console.log("error", error));
+console.log(data);
+
+// async function getData() {
+//   const response = await fetch(
+//     "https://cors-anywhere.herokuapp.com/https://api.igdb.com/v4/games/"
+//   );
+//   const result = await response.result();
+// }
+
+// getData();
+
+function handleResult(gameList) {
+  console.log(gameList);
+}
