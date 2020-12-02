@@ -19,10 +19,6 @@ burgerOutside.addEventListener("click", function (event) {
   body.classList.remove("body__stop-scroll");
 });
 
-burgerActive.addEventListener("click", function (event) {
-  body.classList.remove("body__stop-scroll");
-});
-
 //Google Map
 
 function initMap() {
@@ -50,7 +46,23 @@ function initMap() {
   });
 }
 
-// IGDB API
+//Setting up CORS
+
+const express = require("express");
+const cors = require("cors");
+const app = express();
+
+app.use(cors());
+
+app.get("/products/:id", function (req, res, next) {
+  res.json({ msg: "This is CORS-enabled for all origins!" });
+});
+
+app.listen(80, function () {
+  console.log("CORS-enabled web server listening on port 80");
+});
+
+// IGDB API DETAILS
 
 //Client ID - rkh8yp9twik1pqb6h9el1mur2ah3fs
 // Client secret - 9srh1ecwcti9dy8um1p4pfjpb7xv0c
@@ -62,7 +74,10 @@ function initMap() {
 // }
 
 // // end point
-// https://api.igdb.com/v4/genres
+// https://it53gz3qc0.execute-api.us-west-2.amazonaws.com/production/v4/games
+// https://api.igdb.com/v4/games
+
+// IGDB API
 
 let myHeaders = new Headers();
 myHeaders.append("Client-ID", "rkh8yp9twik1pqb6h9el1mur2ah3fs");
@@ -73,7 +88,8 @@ myHeaders.append(
   "__cfduid=d8e13647ba8cc255b89736ed9484294be1606685768"
 );
 
-let raw = "fields checksum,created_at,name,slug,updated_at,url;";
+let raw =
+  'search "Apex Legends season 7"; fields name,release_dates,genres.name,rating,slug,involved_companies;';
 
 let requestOptions = {
   method: "POST",
@@ -82,31 +98,10 @@ let requestOptions = {
   redirect: "follow",
 };
 
-fetch("https://api.igdb.com/v4/genres/", requestOptions)
+fetch(
+  "https://it53gz3qc0.execute-api.us-west-2.amazonaws.com/production/v4/games",
+  requestOptions
+)
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.log("error", error));
-
-// axios({
-//   url: "https://api.igdb.com/v4/genres",
-//   method: "POST",
-//   headers: {
-//     Accept: "application/json",
-//     "Client-ID": "Client rkh8yp9twik1pqb6h9el1mur2ah3fs",
-//     Authorization: "Bearer hhdi4so0l7uzp8xqd165c628lzss71",
-//   },
-//   data: "fields checksum,created_at,name,slug,updated_at,url;",
-// })
-//   .then((response) => {
-//     console.log(response.data);
-//   })
-//   .catch((err) => {
-//     console.error(err);
-//   });
-
-// async function data() {
-//   const response = await fetch(
-//     "https://id.twitch.tv/oauth2/tokenclient_id=rkh8yp9twik1pqb6h9el1mur2ah3fs&client_secret=70e1marefy5em3c2spjr58pvrqlp2t&grant_type=client_credentials"
-//   );
-//   const twitchData = await response.json();
-// }

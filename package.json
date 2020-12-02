@@ -18,5 +18,8 @@
   "homepage": "https://github.com/thaisont/inn-final-project#readme",
   "devDependencies": {
     "node-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5"
   }
 }
