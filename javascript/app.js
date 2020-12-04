@@ -3,6 +3,7 @@ const burgerNav = document.querySelector(".burger__icon");
 const burgerOutside = document.querySelector(".burger__outside");
 const burgerDisplay = document.querySelector(".burger__background");
 const body = document.querySelector("body");
+const genre = document.getElementById("genre-test");
 
 //Toggle nav
 burger.addEventListener("click", function () {
@@ -89,9 +90,15 @@ fetch(
   requestOptions
 )
   .then((response) => response.json())
-  .then((result) => handleResult(result))
+  .then((result) => handleResult(result[0].genres[0].name))
   .catch((error) => console.log("error", error));
+
 console.log(data);
+
+function handleResult(gameList) {
+  genre.innerHTML = gameList;
+  console.log(gameList);
+}
 
 // async function getData() {
 //   const response = await fetch(
@@ -101,7 +108,3 @@ console.log(data);
 // }
 
 // getData();
-
-function handleResult(gameList) {
-  console.log(gameList);
-}
