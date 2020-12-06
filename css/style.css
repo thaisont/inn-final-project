@@ -629,7 +629,7 @@ body {
       padding-right: 0; } }
 
 .body__lead,
-.body__genre,
+#body__genre,
 .body__released,
 .available,
 .body__review,
@@ -638,7 +638,7 @@ body {
   font-size: 14px; }
   @media only screen and (min-width: 68.75em) {
     .body__lead,
-    .body__genre,
+    #body__genre,
     .body__released,
     .available,
     .body__review,
