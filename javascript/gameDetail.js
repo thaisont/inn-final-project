@@ -11,18 +11,22 @@
 //   console.log(gameList);
 // }
 
+const bodyGenre = document.getElementById("body__genre");
+
 const apiUrl =
   "https://rawg.io/api/games/apex-legends?key=d0184df14199445a8da8df93d9558848";
 
 async function getGenre() {
   const response = await fetch(apiUrl);
   const data = await response.json();
+  const gameGenre = data.genres[0].name;
+  const gameGenreTwo = data.genres[1].name;
+  const gameGenreThree = data.genres[2].name;
+  const gameGenreFour = data.genres[3].name;
 
   console.log(data);
 
-  document.getElementById(
-    "body__genre"
-  ).innerHTML = `Genre : ${data.genres[0].name}`;
+  bodyGenre.innerHTML = `Genre : ${gameGenre} , ${gameGenreTwo} , ${gameGenreThree} , ${gameGenreFour}`;
 }
 
 getGenre();
