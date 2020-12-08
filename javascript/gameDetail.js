@@ -12,6 +12,7 @@
 // }
 
 const bodyGenre = document.getElementById("body__genre");
+const bodyDeveloper = document.getElementById("developer");
 
 const apiUrl =
   "https://rawg.io/api/games/apex-legends?key=d0184df14199445a8da8df93d9558848";
@@ -23,10 +24,12 @@ async function getGenre() {
   const gameGenreTwo = data.genres[1].name;
   const gameGenreThree = data.genres[2].name;
   const gameGenreFour = data.genres[3].name;
+  const gameDeveloper = data.developers[0].name;
 
   console.log(data);
 
   bodyGenre.innerHTML = `Genre : ${gameGenre} , ${gameGenreTwo} , ${gameGenreThree} , ${gameGenreFour}`;
+  bodyDeveloper.innerHTML = `Developer : ${gameDeveloper}`;
 }
 
 getGenre();

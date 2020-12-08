@@ -11,8 +11,20 @@ function initMap() {
   const marker = new google.maps.Marker({
     position: { lat: 51.5045, lng: -0.0865 },
     map,
+    animation: google.maps.Animation.DROP,
     title: "INN",
   });
+
+  // animation
+  marker.addListener("click", toggleBounce);
+
+  function toggleBounce() {
+    if (marker.getAnimation() !== null) {
+      marker.setAnimation(null);
+    } else {
+      marker.setAnimation(google.maps.Animation.BOUNCE);
+    }
+  }
 
   //info window
 

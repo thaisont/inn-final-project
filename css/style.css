@@ -366,7 +366,7 @@ body {
         font-size: 32px; } }
     @media only screen and (min-width: 75em) {
       .section__top--title {
-        font-size: 36px; } }
+        font-size: 40px; } }
   .section__top--description {
     font-weight: 600;
     font-size: 22px;
@@ -376,7 +376,7 @@ body {
         font-size: 20px; } }
     @media only screen and (min-width: 75em) {
       .section__top--description {
-        font-size: 24px; } }
+        font-size: 26px; } }
     .section__top--description--search {
       margin: 2rem 0;
       position: relative; }
@@ -393,13 +393,13 @@ body {
   cursor: pointer; }
 
 .genre {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   color: #221e39;
   margin-bottom: 1.5rem; }
   @media only screen and (min-width: 68.75em) {
     .genre {
-      margin-bottom: 1rem; } }
+      margin-bottom: 2rem; } }
   .genre__list a {
     text-decoration: none; }
   .genre__list {
@@ -634,6 +634,11 @@ body {
 #body__genre--nba,
 #body__genre--ufc,
 #body__genre--cod,
+#developer,
+#developer__spiderman,
+#developer__nba,
+#developer__ufc,
+#developer__cod,
 .body__released,
 .available,
 .body__review,
@@ -647,6 +652,11 @@ body {
     #body__genre--nba,
     #body__genre--ufc,
     #body__genre--cod,
+    #developer,
+    #developer__spiderman,
+    #developer__nba,
+    #developer__ufc,
+    #developer__cod,
     .body__released,
     .available,
     .body__review,
