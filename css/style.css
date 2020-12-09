@@ -176,6 +176,7 @@ body {
 .burger {
   background: transparent;
   position: fixed;
+  top: 3rem;
   right: 3rem;
   padding: 0.8rem 1.3rem 1.3rem 1.7rem;
   cursor: pointer; }
@@ -186,7 +187,8 @@ body {
 
 .burger__icon {
   position: fixed;
-  right: 3rem; }
+  right: 3rem;
+  top: 3rem; }
   .burger__icon, .burger__icon::before, .burger__icon::after {
     width: 3rem;
     height: 5px;
