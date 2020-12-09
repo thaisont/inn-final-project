@@ -1,5 +1,18 @@
+.burger {
+  background: transparent;
+  position: fixed;
+  right: 3rem;
+  padding: 0.8rem 1.3rem 1.3rem 1.7rem;
+  cursor: pointer;
+
+  @media only screen and (min-width: $bp-large) {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
 .burger__icon {
-  position: absolute;
+  position: fixed;
   right: 3rem;
   &,
   &::before,
@@ -8,7 +21,6 @@
     height: 5px;
     background-color: black;
     display: inline-block;
-    cursor: pointer;
   }
 
   &::before,

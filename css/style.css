@@ -173,15 +173,25 @@ body {
   color: #c4302b;
   transition: ease-in 0.2s; }
 
+.burger {
+  background: transparent;
+  position: fixed;
+  right: 3rem;
+  padding: 0.8rem 1.3rem 1.3rem 1.7rem;
+  cursor: pointer; }
+  @media only screen and (min-width: 68.75em) {
+    .burger {
+      visibility: hidden;
+      opacity: 0; } }
+
 .burger__icon {
-  position: absolute;
+  position: fixed;
   right: 3rem; }
   .burger__icon, .burger__icon::before, .burger__icon::after {
     width: 3rem;
     height: 5px;
     background-color: black;
-    display: inline-block;
-    cursor: pointer; }
+    display: inline-block; }
   .burger__icon::before, .burger__icon::after {
     content: "";
     position: absolute;
