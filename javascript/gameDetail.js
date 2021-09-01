@@ -20,16 +20,30 @@ const apiUrl =
 async function getGenre() {
   const response = await fetch(apiUrl);
   const data = await response.json();
-  const gameGenre = data.genres[0].name;
-  const gameGenreTwo = data.genres[1].name;
-  const gameGenreThree = data.genres[2].name;
-  const gameGenreFour = data.genres[3].name;
+
+  const gameGenre = [
+    data.genres[0].name,
+    data.genres[1].name,
+    data.genres[2].name,
+    data.genres[3].name,
+  ];
+
+  let html = `Genre:`;
+
+  gameGenre.forEach((genre) => {
+    html += `${genre}`;
+  });
+
   const gameDeveloper = data.developers[0].name;
 
   console.log(data);
 
-  bodyGenre.innerHTML = `Genre : ${gameGenre} , ${gameGenreTwo} , ${gameGenreThree} , ${gameGenreFour}`;
+  bodyGenre.innerHTML = html;
   bodyDeveloper.innerHTML = `Developer : ${gameDeveloper}`;
 }
 
 getGenre();
+
+// const gameGenreTwo = data.genres[1].name;
+// const gameGenreThree = data.genres[2].name;
+// const gameGenreFour = data.genres[3].name;
