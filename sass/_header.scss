@@ -1,8 +1,8 @@
 .burger {
-  background: transparent;
+  background: blue;
   position: fixed;
   top: 3rem;
-  right: 3rem;
+  right: 2rem;
   padding: 0.8rem 1.3rem 1.3rem 1.7rem;
   cursor: pointer;
 
@@ -15,7 +15,7 @@
 .burger__icon {
   position: fixed;
   right: 3rem;
-  top: 2rem;
+  top: 3rem;
   &,
   &::before,
   &::after {
